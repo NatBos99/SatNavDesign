@@ -16,17 +16,22 @@ class Scene {
 }
 
 let currentScene = 0;
+let colorBlindMode = false;
 
 const stats1 = new Stats("80 km/h", "14:30", "Groningen", "20 minutes")
 const stats2 = new Stats("35 km/h", "09:20", "Assen", "5 minutes")
 let scenes = [];
-const scene1 = new Scene('bimgs/bg0.jpg', stats1, "Take the first exit");
-const scene2 = new Scene('bimgs/bg1.jpg', stats2, "Take the second exit");
+const scene1 = new Scene('bimgs/bg0', stats1, "Take the first exit");
+const scene2 = new Scene('bimgs/bg1', stats2, "Take the second exit");
 scenes.push(scene1);
 scenes.push(scene2);
 
 $(document).ready(function () {
   loadScene(currentScene);
+  $('#cbswitch').change(function () {
+    colorBlindMode = this.checked;
+    updateSettings();
+   });
 });
 
 function changeSceneRight() {
@@ -45,9 +50,17 @@ function loadScene(index) {
   }
   let scene = scenes[index];
   $(".instructions").children("span")[0].innerHTML = scene.instruction;
-  $(".satnav").css("background-image", "url('" + scene.bimg + "')")
+  if (colorBlindMode) {
+    $(".satnav").css("background-image", "url('" + scene.bimg + "cb.jpg')")
+  } else {
+    $(".satnav").css("background-image", "url('" + scene.bimg + ".jpg')")
+  }
   $(".satnav").css("background-position", "center")
   $(".satnav").css("background-repeat", "no-repeat")
   $(".satnav").css("background-size", "cover")
   currentScene = index;
+}
+
+function updateSettings() {
+  loadScene(currentScene);
 }

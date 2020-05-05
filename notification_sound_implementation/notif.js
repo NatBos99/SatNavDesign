@@ -20,8 +20,8 @@ let currentScene = 0;
 const stats1 = new Stats("80 km/h", "14:30", "Groningen", "20 minutes")
 const stats2 = new Stats("35 km/h", "09:20", "Assen", "5 minutes")
 let scenes = [];
-const scene1 = new Scene('bimgs/bg0.png', stats1, "Take the first exit");
-const scene2 = new Scene('bimgs/bg1.png', stats2, "Take the second exit");
+const scene1 = new Scene('bimgs/bg0.jpg', stats1, "Take the first exit");
+const scene2 = new Scene('bimgs/bg1.jpg', stats2, "Take the second exit");
 scenes.push(scene1);
 scenes.push(scene2);
 
@@ -45,5 +45,9 @@ function loadScene(index) {
   }
   let scene = scenes[index];
   $(".instructions").children("span")[0].innerHTML = scene.instruction;
+  $(".satnav").css("background-image", "url('" + scene.bimg + "')")
+  $(".satnav").css("background-position", "center")
+  $(".satnav").css("background-repeat", "no-repeat")
+  $(".satnav").css("background-size", "cover")
   currentScene = index;
 }

@@ -12,6 +12,13 @@
 <body>
 
 <h1>Simple SatNav Implementation</h1>
+<div class="demo_settings">
+  <button type="button" class="btn btn-outline-primary demo_settings_button" aria-label="Left Align", onclick="playSound()">
+    <svg class="bi bi-play" width="4em" height="4em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M10.804 8L5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 010 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z" clip-rule="evenodd"/>
+    </svg>
+  </button>
+</div>
 <div class="view_frame">
   <div class="left_arrow", onclick="changeSceneLeft();">
     <i class="left arrow"></i>
@@ -31,7 +38,12 @@
 
     <div class="footer">
       <div class="keyboard">
-
+        <svg class="key-icon" viewBox="0 0 96 96", fill="#333333", onclick="showKeyboard();">
+          <path d="M70,28.8H26c-3,0-5.5,2.5-5.5,5.5l0,27.5c0,3,2.5,5.5,5.5,5.5h44c3,0,5.5-2.5,5.5-5.5V34.3
+      		         C75.5,31.2,73,28.8,70,28.8z M45.3,37h5.5v5.5h-5.5V37z M45.3,45.3h5.5v5.5h-5.5V45.3z M37,37h5.5v5.5H37V37z M37,45.3h5.5v5.5H37
+  		             V45.3z M34.3,50.8h-5.5v-5.5h5.5V50.8z M34.3,42.5h-5.5V37h5.5V42.5z M59,61.8H37v-5.5h22V61.8z M59,50.8h-5.5v-5.5H59V50.8z
+    		           M59,42.5h-5.5V37H59V42.5z M67.3,50.8h-5.5v-5.5h5.5V50.8z M67.3,42.5h-5.5V37h5.5V42.5z"/>
+        </svg>
       </div>
       <div class="instructions">
         <span>Temp text</span>

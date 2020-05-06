@@ -22,7 +22,7 @@ body {
   height: 80%;
   width: 70%;
   border: 1px solid black;
-  margin-top: 60px;
+  margin-top: 20px;
 }
 
 .view_frame:after {
@@ -35,6 +35,22 @@ div {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+}
+
+.demo_settings {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.demo_settings_button {
+  width: 100px;
+  height: 50px;
+  margin-top: -10px;
+}
+
+.bi-play {
+  margin-top: -18%;
+  margin-left: 10%;
 }
 
 .left_arrow {
@@ -116,6 +132,17 @@ div {
   width: 20%;
   height: 100%;
   border-right: 1px solid black;
+  text-align: center;
+}
+
+.key-icon {
+  margin-top: -5%;
+  width: 8em;
+  height: 8em;
+}
+
+.key-icon:hover, .key-icon:active {
+  fill: gray;
 }
 
 .instructions {

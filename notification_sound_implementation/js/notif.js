@@ -61,13 +61,13 @@ function loadScene(index) {
   let scene = scenes[index];
   $(".instructions").children("span")[0].innerHTML = scene.instruction;
   if (colorBlindMode) {
-    $(".satnav").css("background-image", "url('" + scene.bimg + "cb.jpg')")
+    $(".satnav").css("background-image", "url('" + scene.bimg + "cb.png')")
   } else {
-    $(".satnav").css("background-image", "url('" + scene.bimg + ".jpg')")
+    $(".satnav").css("background-image", "url('" + scene.bimg + ".png')")
   }
-  $(".satnav").css("background-position", "center")
+  $(".satnav").css("background-position", "0% 30%")
   $(".satnav").css("background-repeat", "no-repeat")
-  $(".satnav").css("background-size", "cover")
+  $(".satnav").css("background-size", "100% 75%")
   currentScene = index;
 }
 

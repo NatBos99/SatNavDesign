@@ -12,21 +12,10 @@
 <body>
 
 <h1>Simple SatNav Implementation</h1>
-<div class="demo_settings">
-  <button type="button" class="btn btn-outline-primary demo_settings_button" aria-label="Left Align", onclick="playSound()">
-    <svg class="bi bi-play" width="4em" height="4em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-      <path fill-rule="evenodd" d="M10.804 8L5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 010 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z" clip-rule="evenodd"/>
-    </svg>
-  </button>
-</div>
 <div class="view_frame">
-  <div class="left_arrow", onclick="changeSceneLeft();">
-    <i class="left arrow"></i>
-  </div>
   <div class="satnav">
     <div class="header">
       <div class="drive_statistics">
-
       </div>
       <div class="settings">
         <svg class="bi bi-gear" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" data-toggle="modal" data-backdrop="false" data-target="#exampleModalCenter">
@@ -50,9 +39,27 @@
       </div>
     </div>
   </div>
-  <div class="right_arrow" onclick="changeSceneRight();">
-    <i class="right arrow"></i>
-  </div>
+</div>
+<div class="demo_settings">
+	<h4>DEMO CONTROL MENU</h4>
+  <button type="button" class="btn btn-outline-primary demo_settings_button" aria-label="Left Align", onclick="playSound()">
+    <svg class="bi bi-volume-up" width="3.2em" height="3.2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="margin-top: -0.45em">
+			<path fill-rule="evenodd" d="M6.717 3.55A.5.5 0 017 4v8a.5.5 0 01-.812.39L3.825 10.5H1.5A.5.5 0 011 10V6a.5.5 0 01.5-.5h2.325l2.363-1.89a.5.5 0 01.529-.06zM6 5.04L4.312 6.39A.5.5 0 014 6.5H2v3h2a.5.5 0 01.312.11L6 10.96V5.04z" clip-rule="evenodd"/>
+			<path d="M11.536 14.01A8.473 8.473 0 0014.026 8a8.473 8.473 0 00-2.49-6.01l-.708.707A7.476 7.476 0 0113.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z"/>
+			<path d="M10.121 12.596A6.48 6.48 0 0012.025 8a6.48 6.48 0 00-1.904-4.596l-.707.707A5.483 5.483 0 0111.025 8a5.483 5.483 0 01-1.61 3.89l.706.706z"/>
+			<path d="M8.707 11.182A4.486 4.486 0 0010.025 8a4.486 4.486 0 00-1.318-3.182L8 5.525A3.489 3.489 0 019.025 8 3.49 3.49 0 018 10.475l.707.707z"/>
+		</svg>
+  </button>
+  <button type="button" class="btn btn-outline-primary demo_settings_button" aria-label="Left Align", onclick="changeSceneLeft()">
+		<svg class="bi bi-caret-left" width="3.2em" height="3.2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="margin-top: -0.45em">
+			<path fill-rule="evenodd" d="M10 12.796L4.519 8 10 3.204v9.592zm-.659.753l-5.48-4.796a1 1 0 010-1.506l5.48-4.796A1 1 0 0111 3.204v9.592a1 1 0 01-1.659.753z" clip-rule="evenodd"/>
+		</svg>
+  </button>
+	<button type="button" class="btn btn-outline-primary demo_settings_button" aria-label="Left Align", onclick="changeSceneRight()">
+		<svg class="bi bi-caret-right" width="3.2em" height="3.2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="margin-top: -0.45em">
+			<path fill-rule="evenodd" d="M6 12.796L11.481 8 6 3.204v9.592zm.659.753l5.48-4.796a1 1 0 000-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 001.659.753z" clip-rule="evenodd"/>
+		</svg>
+  </button>
 </div>
 
 <!-- Modal -->

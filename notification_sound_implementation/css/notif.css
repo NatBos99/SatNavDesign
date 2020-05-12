@@ -129,8 +129,6 @@ div {
   width: 80%;
   height: 100%;
   text-align: center;
-  font-size: 30px;
-  margin-top: 3%;
 }
 
 .arrow {
@@ -154,4 +152,9 @@ div {
   margin-top: 230%;
   margin-left: 10%;
   position: relative;
+}
+
+#text-change-box {
+  position: relative;
+  text-align: center;
 }

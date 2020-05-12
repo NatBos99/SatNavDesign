@@ -41,7 +41,11 @@ $(document).ready(function () {
   $('#cbswitch').change(function () {
     colorBlindMode = this.checked;
     updateSettings();
-   });
+  });
+  changeFontSize("medium");
+  $('input[name=fontsizeoptions]').click(function () {
+    changeFontSize(this.value);
+  });
 });
 
 function changeSceneRight() {
@@ -50,6 +54,24 @@ function changeSceneRight() {
 
 function changeSceneLeft() {
   loadScene(currentScene-1);
+}
+
+function changeFontSize(fontSize) {
+  if (fontSize == "small") {
+    $('.instructions').css('font-size', '160%');
+    $('.instructions').css('margin-top', '4%');
+    $('.drive_statistics').css('font-size', '160%');
+  } else if (fontSize == "medium") {
+    $('.instructions').css('font-size', '200%');
+    $('.instructions').css('margin-top', '3%');
+    $('.drive_statistics').css('font-size', '200%');
+  } else if (fontSize == "large") {
+    $('.instructions').css('font-size', '240%');
+    $('.instructions').css('margin-top', '2%');
+    $('.drive_statistics').css('font-size', '240%');
+  } else {
+    console.log("Invalid font size: " + fontSize);
+  }
 }
 
 function loadScene(index) {

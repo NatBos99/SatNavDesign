@@ -12,11 +12,22 @@
   </head>
 <body>
 
-<h1>Simple SatNav Implementation</h1>
 <div class="view_frame">
   <div class="satnav">
     <div class="header">
       <div class="drive_statistics">
+        <div class="destination">
+          <span><b>Destination:</b></span><br>
+          <span>temp</span>
+        </div>
+        <div class="time">
+          <span><b>Current Time</b></span><br>
+          <span>temp</span>
+        </div>
+        <div class="eta">
+          <span class="smaller_font_eta"><b>ETA:</b></span><br>
+          <span>temp</span>
+        </div>
       </div>
       <div class="settings">
         <svg class="bi bi-gear" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" data-toggle="modal" data-backdrop="false" data-target="#exampleModalCenter">
@@ -65,7 +76,7 @@
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">Settings</h5>
@@ -75,9 +86,9 @@
       </div>
       <div class="modal-body">
         <div class="custom-control custom-switch">
-          <div>
+          <div style="text-align: center;">
             <input type="checkbox" class="custom-control-input" id="cbswitch">
-            <label class="custom-control-label" for="cbswitch">Turn off/on red and green color blind mode!</label>
+            <label class="custom-control-label" for="cbswitch">Turn off/on high contrast mode!</label>
           </div><br>
           <div id="text-change-box">
             <p>Text options:</p>
@@ -90,6 +101,36 @@
               </label>
               <label class="btn btn-secondary">
                 <input type="radio" name="fontsizeoptions" value="large" autocomplete="off"> Large
+              </label>
+            </div>
+          </div><br>
+          <div id="sound_sliders">
+            <div>
+              <p>Adjust Volume</p>
+              <input type="range" class="custom-range" min="0" max="100" value="50" step="1" id="volumeslider">
+            </div>
+            <br>
+            <span>Speaker Options:</span>
+            <br>
+            <span>Pitch: </span>
+            <div class="btn-group btn-group-toggle" id="pitch-box" data-toggle="buttons">
+              <label class="btn btn-secondary active">
+                <input type="radio" name="pitchshift" value="low" autocomplete="off"> Low
+              </label>
+              <label class="btn btn-secondary">
+                <input type="radio" name="pitchshift" value="medium" autocomplete="off" checked> Medium
+              </label>
+              <label class="btn btn-secondary">
+                <input type="radio" name="pitchshift" value="high" autocomplete="off"> High
+              </label>
+            </div>
+            <span>Speaker: </span>
+            <div class="btn-group btn-group-toggle" id="speaker-box" data-toggle="buttons">
+              <label class="btn btn-secondary active">
+                <input type="radio" name="speakergender" value="female" autocomplete="off"> Female
+              </label>
+              <label class="btn btn-secondary">
+                <input type="radio" name="speakergender" value="male" autocomplete="off" checked> Male
               </label>
             </div>
           </div>

@@ -131,6 +131,14 @@ function updateSettings() {
   loadScene(currentScene);
 }
 
+function wait(ms)
+{
+    var d = new Date();
+    var d2 = null;
+    do { d2 = new Date(); }
+    while(d2-d < ms);
+}
+
 function playSound() {
   let a1 = new Audio(scenes[currentScene].sound.notif + currentPitch + '.mp3');
   a1.volume = currentVolume / 100;
